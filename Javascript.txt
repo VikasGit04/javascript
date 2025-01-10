@@ -1,0 +1,162 @@
+Javascript Methods
+
+1. Array Functions in JS
+	1. map() - it return an array to result the existing array into some different values of array by applying logic.
+	2. filter() - It return an array based on some condition.
+	3. reduce() - It results a single value(number or string) and takes 2 argument.
+	First could be an array, an object or a function and another being the starting point.
+	syntax: var_name.reduce((accumulator, currentValue)=>{})
+	4. unshift() - Insert the element in the beginning of the array.
+	5. shift() - Delete the first element of the array.
+	6.slice() - It returns an array having 2 arguments, 1 being the starting point of the array and another being the ending point.
+	7. splice() - It removes the element but does not create a new variable to store, instead it modifies the existing array.
+Follow-up questions
+-map creates a new array by transforming each element individually.
+-filter create a new array by removing elements that don't belong.
+-reduce takes all the elements of the array and reduces them to a single value. 
+
+
+2. Closure - It is a combination of functions bundled together with reference to its surrounding variables 
+i,e its lexical environment. 
+In other words, a closure gives access to outer function scope from an inner function. 
+
+3. Object - Object is an instance containing key value pairs.
+
+4. Inheritance - to inherit methods of parent class, we can achieve this by using extend keyword.
+
+5. setTimeout(), setInterval()
+
+6. Event bubbling -  
+how to know about which event got triggered in event bubbling
+stop event bubbling- event.stopPropagation();
+
+7. Functions in JS
+i. Function statement/Function Declaration - is declaring a function that can be executed later.
+Ex-
+function state(){
+	console.log("Function Statement");
+}
+ii. Function Expression - Functions assigned to a variable or an expression. 
+In this we can define the function without a name so that function becomes a "Anonymous Function". 
+And we define a function expression with a name that is "Named Function Expression"
+Ex-
+var funcExpress1 = function () {
+	console.log("Function Expression as anonymous");
+};
+funcExpress1();
+var funcExpress2 = function name() {
+	console.log("Function Expression as named");
+};
+funcExpress2();
+
+iii.First Class Function : function which is treated just like a variable or which can be passed as an argument in
+a function.
+Return function from another function.
+
+
+iv. Higher Order Function : Function which can accept other function as an argument, or return a function.
+
+function HOF(FistClassFunction) {
+	return function(x) {
+		return FistClassFunction(x);
+	}
+}
+
+v. Arrow Function
+
+Follow-up questions
+- Difference between function statement and function expression.
+=>  1. Function Statement cannot have anonymous function, but function expression can have.
+	2. Hoisting - In function statement when we call/invoke the function before its declaration that is allowed i.e 
+		it can be used when it is called. But in function expression when we call/invoke before its declaration that is not 
+		allowed it will show error as the variable is not a function i.e it can't be used unless it reaches the function 
+		statement of the variable.
+		In the Global memory the functions statements are assigned as block statement but the function expression is 
+		defined as undefined just like any other variable.
+	
+vi.  Immediately Invoked Function Expression (IIFE)
+- It is a design pattern where you define a function and execute it immediately after its declaration. 
+	This technique is commonly used to create a local scope for variables, avoiding pollution of the global scope.
+	(function() {
+		// code within the IIFE is executed immediately
+		var message = "Hello, World!";
+		console.log(message);
+	})();
+
+
+8. Hosting - Default behaviour of JS, which move all the variable declarations at the top of the current scope.
+
+9. this keyword - it refers to the current object of the method or constructor.
+
+10. JS Datatypes
+- string, number, boolean, Object, BigInt, null, undefined, Symbol(it is also a type of Object but these are 
+immutable)
+follow-up Questions-
+a. null and undefined
+	null - is a datatype of javascript, the value is empty intentionally. and type of null is an Object.
+	undefined - is a datatype of JS, the value is not initialized. Type of undefined is undefined.
+
+11. Object-bound Functions - 
+call() - It is used to call a function of an object by another object. 
+It is executed Immediately and it takes arguments in comma separated way.
+apply() - It is just like call(), but it takes the arguments in the array list way.
+bind() - It is similar to call, but return a function and can be executed afterwards.
+Ex:
+let obj1={
+  fname: "Rahul",
+  lname: "Sharma"
+ }
+ let fullname = function(place,methodname){
+  console.log("Method:"+methodname+" - "+this.fname+" "+this.lname + " is from "+ place + ".");
+ }
+ 
+ fullname.call(obj1,"Mumbai", "Call");
+ fullname.apply(obj1,["Rajasthan","Apply"]);
+ let full_name= fullname.bind(obj1,"Kolkata","Bind");
+ full_name();
+
+12. Curring in JS - function with multiple arguments can be formed as nested functions of multiple single argument. 
+like function(a,b,c) as function(a)(b)(c) ex: 
+function sum(a,b,c){return a+b+c;} | const sum1=curry(sum); sum(a)(b)(c); 
+
+13. Callback hell - When there is a nested callback executed, so it may happen at some point in between it fails, 
+so to avoid these things we can use queues and promises.
+
+14. ES6 Feature
+	1. let and const variable declaration
+	2. Arrow function
+	3. Template Literals - in back ticks we can define variables using $ like this-`$(varname)`
+	4. Destructuring Array/(Properties of Objects)
+	5. Mult-line string
+	6. Default parameters
+	7. Promises can have arrow functions now
+	8. Enhanced Object Literals
+	9. Classes
+	10. Modules
+Destructuring of Array/Properties of Object
+function calculate(a,b)={
+	const sum=a+b;
+	const sub=a-b;
+	const mul=a*b;
+	
+	return [sum,sub,mul];
+}
+
+const [s,su,m]=calculate(2,3);
+
+15. Local Storage and Session Storage.
+
+16. Access functional variables
+
+Tightly coupled or lossely coupled. Cupling 
+
+private constructor
+
+union
+
+user defined data type.
+
+arrow function vs normal function
+
+Temporal Dead Zone: It happen when we declare a variable with let or const and try to access it before
+ initialization.
