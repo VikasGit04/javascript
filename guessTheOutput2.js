@@ -92,23 +92,82 @@ console.log(obj.height);
 */
 
 //Q7
-function a() {
-    console.log('A');
-}
+// function a() {
+//     console.log('A');
+// }
 
-async function e() {
-    return 'E';
-}
+// async function e() {
+//     return 'E';
+// }
 
-setTimeout(()=> console.log('B'), 0)
+// setTimeout(()=> console.log('B'), 0)
 
-a();
+// a();
 
-console.log('C');
-e().then((data)=> console.log(data));
-Promise.resolve().then(()=> console.log('D'));
+// console.log('C');
+// e().then((data)=> console.log(data));
+// Promise.resolve().then(()=> console.log('D'));
 
 // A
 // C
 // D
 // B
+
+//Q8
+// function sum() {
+//     let a = 8;
+//     const b = 2;
+//     var c = a+b;
+
+// }
+// // console.log(c)
+// sum()
+// console.log(c);
+
+//Q9
+
+// arr = [1,2,3,4,5];
+// console.log(arr[2], arr.length);        //3 5
+// arr.length = 0;
+// console.log(arr[2], arr.length);    
+
+
+// (function fnA(a){
+//     return (function fnB(a) {
+//         console.log(a);
+//     })(1)
+// })(0);
+
+// let x=1;
+// const y=2;
+// var z=3;
+// i=4;
+// console.log('hi');
+
+// function test() {
+//     console.log(x,y,z,i);
+// }
+// test();
+
+// arr = [ 1, 2, 3, [4,5], [[6,[7]]]];
+// console.log(arr.flat(Infinity));
+
+// obj = {
+//     city : 'Delhi',
+//     street: 'ABC'
+// }
+
+// obj.pincode = 400;
+
+// console.log(obj.pincode);
+// // delete obj.pincode;
+// obj.pincode = undefined;
+// console.log(obj);
+
+
+function sum() {
+    // let args = arguments;
+    // console.log(args);
+
+}
+console.log(sum(1,2,3));
