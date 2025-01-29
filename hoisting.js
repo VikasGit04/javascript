@@ -15,7 +15,7 @@ function hoistingExample() {
 // hoistingExample();
 
 function blockScopeExample() {
-    var varVariable = 'Global var variable';
+    var varVariable = 'Global var variable'; 
     let letVariable = 'Global let variable';
     const constVariable = 'Global const variable';
 

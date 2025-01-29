@@ -117,7 +117,9 @@ let obj1={
 
 12. Curring in JS - function with multiple arguments can be formed as nested functions of multiple single argument. 
 like function(a,b,c) as function(a)(b)(c) ex: 
-function sum(a,b,c){return a+b+c;} | const sum1=curry(sum); sum(a)(b)(c); 
+function sum(a,b,c){return a+b+c;} 
+const sum1=curry(sum); sum(a)(b)(c); 
+TODO: Incomplete
 
 13. Callback hell - When there is a nested callback executed, so it may happen at some point in between it fails, 
 so to avoid these things we can use queues and promises.

@@ -2,14 +2,6 @@ Array.prototype.myFlat = function(depth) {
     let flattenedArray = [];
 
     function flatten(arr, currentDepth) {
-
-        for (const arr in object) {
-            if (Object.prototype.hasOwnProperty.call(object, arr)) {
-                const element = object[arr];
-                
-            }
-        }
-
         for(let i=0; i< arr.length; i++) {
             if (Array.isArray(arr[i]) && currentDepth < depth) {
                 flatten(arr[i], currentDepth + 1);

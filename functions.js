@@ -86,7 +86,6 @@ function find(index) {
 }
 
 let closureFind = find();
-console.
 console.time("651");
 closureFind(651);
 console.timeEnd("651");
