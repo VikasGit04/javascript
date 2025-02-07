@@ -1,5 +1,5 @@
 function testScope() {
-    console.log(x); undefined
+    console.log(x); // undefined
 
     if (true) {
         var x = 10;
@@ -40,7 +40,7 @@ function redeclarationTest() {
 
 function tdzTest() {
     console.log(a); // undefined
-    console.log(b); // cannot access 'b' before initialization
+    console.log(b); // Reference Error: cannot access 'b' before initialization
     
     var a = 5;
     let b = 6;
@@ -51,17 +51,19 @@ function tdzTest() {
 // tdzTest();
 
 function loopTest() {
-    for (var i = 0; i < 5; i++) {
-        setTimeout(() => {
-            console.log(i); // 0, 1, 2, 
-        }, i * 1000);
-    }
 
     for (let j = 0; j < 5; j++) {
         setTimeout(() => {
             console.log(j); // What will be logged?
         }, j * 1000);
     }
+
+    for (var i = 0; i < 5; i++) {
+        setTimeout(() => {
+            console.log(i); // 0, 1, 2, 3, 4
+        }, i * 1000);
+    }
+
 }
 // loopTest();
 
@@ -79,7 +81,9 @@ function outer() {
     inner();
     console.log(a); // Outer 'a'
     console.log(b); // Outer 'b'
+    console.log(myVar);
 }
-// outer();
+myVar = 5;
+outer();
 
 

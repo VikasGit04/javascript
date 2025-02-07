@@ -29,10 +29,10 @@ function createIncrement() {
     return [increment, log];
 }
 
-// const [increment, log] = createIncrement();
-// increment();
-// increment();
-// log();
+const [increment, log] = createIncrement();
+increment();
+increment();
+log();
 
 // Q3
 function outerFn() {
@@ -40,8 +40,8 @@ function outerFn() {
     let b = 2;
     
     function innerFn() {
-        // var a = 3; // Different 'a'
-        // let b = 4; // Different 'b'
+        var a = 3; // Different 'a'
+        let b = 4; // Different 'b'
 		a=3;
 		b=4;
         console.log(a); // Inner 'a'
@@ -52,4 +52,4 @@ function outerFn() {
     console.log(a); // Outer 'a'
     console.log(b); // Outer 'b'
 }
-outerFn();
+// outerFn();

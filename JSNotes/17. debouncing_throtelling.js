@@ -1,10 +1,12 @@
 // Debouncing and Throttling in JavaScript
 
 
-// Debouncing and Throttling are both techniques used to control how often a function gets triggered, especially when dealing with events that can fire rapidly, like scrolling, resizing, or keypress events.
+// Debouncing and Throttling are both techniques used to control how often a function gets triggered, especially 
+// when dealing with events that can fire rapidly, like scrolling, resizing, or keypress events.
+
 // 1. Debouncing:
-// What is Debouncing?
-// Debouncing is a technique where you ensure that a function is only executed after a certain amount of time has passed since the last time it was triggered. It prevents the function from being called too often in quick succession.
+// Debouncing is a technique where you ensure that a function is only executed after a certain amount of time has 
+// passed since the last time it was triggered. It prevents the function from being called too often in quick succession.
 // How does it work?
 // Whenever an event is triggered (like a user typing in a text box), the function is delayed for a certain period.
 // If the event is triggered again before that period ends, the delay is reset, and the function is not called.
@@ -42,16 +44,23 @@ setTimeout(debouncedSearch, 1500); // This will trigger the search after 1 secon
 
 // Explanation:
 // If you keep calling debouncedSearch, it will only run the search function once after you stop typing for 1 second.
+
+
 // 2. Throttling:
 // What is Throttling?
-// Throttling ensures that a function is only called once in a specified period, no matter how many times an event is triggered.
+// Throttling ensures that a function is only called once in a specified period, no matter how many times an event is 
+// triggered.
 // How does it work?
-// Instead of allowing a function to run every time an event is triggered, throttling ensures the function runs at a fixed rate.
+// Instead of allowing a function to run every time an event is triggered, throttling ensures the function runs at a 
+// fixed rate.
 // The function will run once every defined interval, even if the event continues to be triggered during that time.
 // Use case for Throttling:
-// Scrolling or resizing: If you want to handle a scroll or resize event but not overburden the system with too many function calls.
+// Scrolling or resizing: If you want to handle a scroll or resize event but not overburden the system with too 
+// many function calls.
+
 // Throttling Example (Scrolling)
-// Imagine you're scrolling down a page, and you want to log a message every 2 seconds, but you don't want it to log too frequently as you scroll.
+// Imagine you're scrolling down a page, and you want to log a message every 2 seconds, but you don't want it to 
+// log too frequently as you scroll.
 // Throttle Logic:
 // Run the function at most once every 2 seconds, no matter how often the event happens.
 

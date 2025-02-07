@@ -86,7 +86,6 @@
             temp1 = alphaArr[i];
             alphaArr[i] = alphaArr[j];
             alphaArr[j] = temp1;
-            console.log(alphaArr);
         }
     }
   }  

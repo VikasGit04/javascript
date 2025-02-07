@@ -16,7 +16,8 @@ function Person(firstname, lastname){
 }
 
 let person=new Person('Raghav','Kumar');
-// Note: Person function is similar to a regular function, just that the first letter is in capital letter which makes it constructor function.
+// Note: Person function is similar to a regular function, just that the first letter is in capital letter which makes 
+// it constructor function.
 
 // Add methods to constructor function- to add a method we should use this keyword.
 
@@ -43,7 +44,8 @@ Person.prototype.greet=function(){
  
  person1.greet();
  
-//  Shadowing - the object instance creates the same method which is defined the Object.prototype so that when called it executed imidiately rather than looking into the object methods.
+//  Shadowing - the object instance creates the same method which is defined the Object.prototype so that when called 
+// it executed imidiately rather than looking into the object methods.
  
 //  Prototype
 //  The Object() function has a property called prototype that references a Object.prototype object.

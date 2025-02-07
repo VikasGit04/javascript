@@ -1,25 +1,25 @@
 // Q1
-// console.log("Start");
+console.log("Start");
 
-// const promise1 = new Promise((resolve, reject) => {
-//   console.log("Promise1 started");
-//   setTimeout(() => {
-//     resolve("Promise1 resolved");
-//   }, 1000);
-// });
+const promise1 = new Promise((resolve, reject) => {
+  console.log("Promise1 started");
+  setTimeout(() => {
+    resolve("Promise1 resolved");
+  }, 1000);
+});
 
-// const promise2 = new Promise((resolve, reject) => {
-//   console.log("Promise2 started");
-//   setTimeout(() => {
-//     resolve("Promise2 resolved");
-//   }, 500);
-// });
+const promise2 = new Promise((resolve, reject) => {
+  console.log("Promise2 started");
+  setTimeout(() => {
+    resolve("Promise2 resolved");
+  }, 500);
+});
 
-// Promise.all([promise1, promise2]).then((results) => {
-//   console.log(results);
-// });
+Promise.all([promise1, promise2]).then((results) => {
+  console.log(results);
+});
 
-// console.log("End");
+console.log("End");
 
  // Q2
 // Explanation: Promise is a microtask and Timeout tasks are macro-tasks, so microtasks are executed before macro-tasks
@@ -88,10 +88,10 @@
 
 // main();
 
-var main = () => {
-    console.log('main');
-}
+// var main = () => {
+//     console.log('main');
+// }
 
-main();
+// main();
   
   

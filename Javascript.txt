@@ -27,6 +27,11 @@ In other words, a closure gives access to outer function scope from an inner fun
 5. setTimeout(), setInterval()
 
 6. Event bubbling -  
+-Event capturing means propagation of event is done from ancestor elements to child element in the DOM while event bubbling means propagation is done from child element to ancestor elements in the DOM.
+-The event capturing occurs followed by event bubbling.
+-If {capture: true} ,event capturing will occur else event bubbling will occur.
+-Both can be prevented by using the stopPropagation() method.
+
 how to know about which event got triggered in event bubbling
 stop event bubbling- event.stopPropagation();
 
@@ -84,7 +89,8 @@ vi.  Immediately Invoked Function Expression (IIFE)
 	})();
 
 
-8. Hosting - Default behaviour of JS, which move all the variable declarations at the top of the current scope.
+8. Hosting - Default behaviour of JS, which move all the declaration of functions, variables, classes, 
+or imports to the top of their scope, prior to execution of the code
 
 9. this keyword - it refers to the current object of the method or constructor.
 
