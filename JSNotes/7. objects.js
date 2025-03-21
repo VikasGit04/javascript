@@ -119,7 +119,8 @@ console.log(person9.hasOwnProperty('name'));  // true
 console.log(person9.hasOwnProperty('gender'));  // false
 
 // 8. this Keyword in Methods
-// The this keyword inside an object method refers to the object itself. This allows methods to access or manipulate the object’s properties.
+// The this keyword inside an object method refers to the object itself. 
+// This allows methods to access or manipulate the object’s properties.
 const person10 = {
   name: 'John',
   age: 30,
@@ -131,7 +132,8 @@ const person10 = {
 person10.greet();  // Output: Hello, John
 
 // Binding this in Object Methods
-// In JavaScript, the value of this inside a method can sometimes be tricky, especially if the method is passed as a callback function or used in an asynchronous context.
+// In JavaScript, the value of this inside a method can sometimes be tricky, especially if the method is passed as a
+// callback function or used in an asynchronous context.
 // You can explicitly set the value of this using methods like .bind(), .call(), or .apply().
 // Example: Using .bind()
 const person11 = {

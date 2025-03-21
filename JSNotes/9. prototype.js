@@ -2,13 +2,16 @@
 // ProtoType
 
 // A prototype is an object from which other objects inherit properties and methods. 
-// It allows objects to share methods and properties, reducing memory usage by avoiding the duplication of the same data.
+// It allows objects to share methods and properties, reducing memory usage by avoiding the duplication of the 
+// same data.
+
 // Here’s how prototypes work in JavaScript:
 // 1.Prototype Chain: Every JavaScript object has a hidden internal property called [[Prototype]] 
 // (commonly accessed using __proto__), which points to the prototype of the object. 
 // When you try to access a property or method of an object, JavaScript first looks at the object itself. 
 // If the property isn’t found, JavaScript looks at the object's prototype, and so on, following the prototype chain 
 // until it reaches null.
+
 // 2.Constructor Functions: If you create an object using a constructor function, that object’s prototype will be 
 // the prototype property of the constructor function. For example:
 

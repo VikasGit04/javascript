@@ -12,7 +12,7 @@ function hoistingExample() {
     console.log(constVariable); // I am declared with const
 }
 
-// hoistingExample();
+hoistingExample();
 
 function blockScopeExample() {
     var varVariable = 'Global var variable'; 
@@ -69,4 +69,4 @@ function scopeExample(condition) {
     console.log(constVariable); // constVariable is not defined
 }
 
-scopeExample(true);
+// scopeExample(true);

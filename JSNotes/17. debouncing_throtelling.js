@@ -1,18 +1,19 @@
 // Debouncing and Throttling in JavaScript
 
-
 // Debouncing and Throttling are both techniques used to control how often a function gets triggered, especially 
 // when dealing with events that can fire rapidly, like scrolling, resizing, or keypress events.
 
 // 1. Debouncing:
 // Debouncing is a technique where you ensure that a function is only executed after a certain amount of time has 
-// passed since the last time it was triggered. It prevents the function from being called too often in quick succession.
+// passed since the last time it was triggered. It prevents the function from being called too often in quick 
+// succession.
 // How does it work?
 // Whenever an event is triggered (like a user typing in a text box), the function is delayed for a certain period.
 // If the event is triggered again before that period ends, the delay is reset, and the function is not called.
 // The function will only be executed after the event stops being triggered for a specified duration.
 // Use case for Debouncing:
-// Searching as you type: When a user types in a search box, you don't want to trigger a search request on every keystroke. Instead, you wait for the user to stop typing for a moment before triggering the search.
+// Searching as you type: When a user types in a search box, you don't want to trigger a search request on 
+// every keystroke. Instead, you wait for the user to stop typing for a moment before triggering the search.
 // Debouncing Example (Typing Search)
 // Imagine you're typing in a search box, and you only want to trigger the search once you've stopped typing for a moment, not on every keystroke.
 // Debounce Logic:
@@ -89,7 +90,6 @@ setInterval(throttledScroll, 500); // Triggers every 0.5 seconds
 
 // Explanation:
 // Even if the throttledScroll is called multiple times in quick succession, the handleScroll function will only be called once every 2 seconds
-
 
 // Key Differences:
 // Debouncing delays the execution of a function until a certain period of inactivity.

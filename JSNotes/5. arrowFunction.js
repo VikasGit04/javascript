@@ -1,5 +1,6 @@
 // Arrow Function
-// An arrow function in JavaScript is a more concise syntax for writing functions. It is introduced in ECMAScript 6 (ES6) and has the following key features:
+// An arrow function in JavaScript is a more concise syntax for writing functions. 
+// It is introduced in ECMAScript 6 (ES6) and has the following key features:
 // 1. Syntax:
 // An arrow function is written as follows:
 
@@ -19,7 +20,8 @@ const functionName3 = () => {
 };
 
 // 2. No this binding:
-// Arrow functions do not have their own this context. Instead, they inherit the this value from the surrounding (enclosing) lexical context. This is useful in scenarios where you want to maintain the value of this in a callback function.
+// Arrow functions do not have their own this context. Instead, they inherit the this value from the surrounding 
+// (enclosing) lexical context. This is useful in scenarios where you want to maintain the value of this in a callback function.
 // Example:
 function Counter() {
   this.count = 0;
@@ -30,10 +32,12 @@ function Counter() {
 }
 
 const counter = new Counter();
+// Here, this.count++ refers to the count property of the Counter object because the arrow function inherits this 
+// from the Counter function.
 
-// Here, this.count++ refers to the count property of the Counter object because the arrow function inherits this from the Counter function.
 // 3. Implicit Return:
-// If the body of the arrow function has a single expression, it implicitly returns the value of that expression without needing a return statement.
+// If the body of the arrow function has a single expression, it implicitly returns the value of that expression 
+// without needing a return statement.
 // Example:
 
 const add = (a, b) => a + b;  // Implicit return
@@ -49,7 +53,8 @@ const Person = (name) => {
 const p = new Person('John');  // TypeError: Person is not a constructor
 
 // 5. No arguments object:
-// Arrow functions do not have their own arguments object, which is typically available in regular functions. You can still access arguments in regular functions but not in arrow functions.
+// Arrow functions do not have their own arguments object, which is typically available in regular functions. 
+// You can still access arguments in regular functions but not in arrow functions.
 // Example:
 
 function regularFunction() {

@@ -1,5 +1,6 @@
 // Lexical Scope 
-// Definition: Lexical scope means that the scope of a variable is determined by where it is declared in the code (its position in the source code), not where it is used.
+// Definition: Lexical scope means that the scope of a variable is determined by where it is declared in the code 
+// (its position in the source code), not where it is used.
 // A function can access variables from its own scope and from outer (parent) scopes, but not from inner (child) scopes.
 // Key Points:
 // Inner functions can access variables from outer functions.

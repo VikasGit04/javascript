@@ -1,28 +1,39 @@
 // Q1
-console.log("Start");
 
-const promise1 = new Promise((resolve, reject) => {
-  console.log("Promise1 started");
-  setTimeout(() => {
-    resolve("Promise1 resolved");
-  }, 1000);
-});
+import { Output } from "@angular/core";
 
-const promise2 = new Promise((resolve, reject) => {
-  console.log("Promise2 started");
-  setTimeout(() => {
-    resolve("Promise2 resolved");
-  }, 500);
-});
+// console.log("Start");
 
-Promise.all([promise1, promise2]).then((results) => {
-  console.log(results);
-});
+// const promise1 = new Promise((resolve, reject) => {
+//   console.log("Promise1 started");
+//   setTimeout(() => {
+//     resolve("Promise1 resolved");
+//   }, 1000);
+// });
 
-console.log("End");
+// const promise2 = new Promise((resolve, reject) => {
+//   console.log("Promise2 started");
+//   setTimeout(() => {
+//     resolve("Promise2 resolved");
+//   }, 500);
+// });
 
- // Q2
-// Explanation: Promise is a microtask and Timeout tasks are macro-tasks, so microtasks are executed before macro-tasks
+// Promise.all([promise1, promise2]).then((results) => {
+//   console.log(results);
+// });
+
+// console.log("End");
+
+//Output
+// Start
+// Promise1 started
+// Promise2 started
+// End
+// [ 'Promise1 resolved', 'Promise2 resolved' ]
+
+// Q2
+// Explanation: Promise is a microtask and Timeout tasks are macro-tasks, 
+// so microtasks are executed before macro-tasks
 // console.log("Start");
 
 // setTimeout(() => {
@@ -43,55 +54,75 @@ console.log("End");
 
 // console.log("End");
 
-// Q3
+// Output
+// Start
+// End
+// Promise 1
+// Promise 2
+// Timeout 1
+// Timeout 2
 
-// async function async1() {
-//     console.log('async1 start');
-//     await async2();
-//     console.log('async1 end');
-//   }
-  
-//   async function async2() {
-//     console.log('async2');
-//   }
-  
-//   console.log('script start');
-  
-//   setTimeout(function() {
-//     console.log('setTimeout');
-//   }, 0);
-  
-//   async1();
-  
-//   new Promise(function(resolve) {
-//     console.log('promise1');
-//     resolve();
-//   }).then(function() {
-//     console.log('promise2');
-//   });
-  
-//   console.log('script end');
+// Q3 - Very important
 
-  // Q4
-// function Foo() {
-//     this.value = 42;
-//     this.getValue = function() {
-//       return this.value;
-//     };
-// }
+  // async function async1() {
+  //   console.log('async1 start');
+  //   await async2();
+  //   console.log('async1 end');
+  // }
   
-//   const obj = new Foo();
-//   const getValue = obj.getValue;
+  // async function async2() {
+  //   console.log('async2');
+  // }
   
-//   console.log(obj.getValue()); // 1.
-//   console.log(getValue()); // 2.
+  // console.log('Script start');
+  
+  // setTimeout(function() {
+  //   console.log('setTimeout');
+  // }, 0);
+  
+  // async1();
+  
+  // new Promise(function(resolve) {
+  //   console.log('promise1');
+  //   resolve();
+  // }).then(function() {
+  //   console.log('promise2');
+  // });
+  
+  // console.log('script end');
+
+  // Output
+  // Script start
+  // async1 start
+  // async2
+  // promise1
+  // script end
+  // async1 end
+  // promise2
+  // setTimeout
+  
+
+// Q4
+function Foo() {
+    this.value = 42;
+    this.getValue = function() {
+      return this.value;
+    };
+}
+  
+const obj = new Foo();
+const getValue = obj.getValue;
+
+console.log(obj.getValue()); // 1.
+console.log(getValue); // 2.
+// console.log(getValue()); // 3.
 
 // main();
 
-// var main = () => {
-//     console.log('main');
-// }
+var main = () => {
+  console.log('main');
+}
 
-// main();
+main();
   
   

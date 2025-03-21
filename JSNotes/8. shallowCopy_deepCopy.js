@@ -1,7 +1,11 @@
 // Shallow Copy vs Deep Copy
 // 1. Shallow Copy
-// A shallow copy creates a new object or array, but it only copies the properties or elements at the top level. If the object or array contains nested objects or arrays, the reference to those nested structures is copied, not the actual data.
-// In other words, changes to nested objects or arrays in the copy will affect the original, because both the original and the copy refer to the same nested structures.
+// A shallow copy creates a new object or array, but it only copies the properties or elements at the top level. 
+// If the object or array contains nested objects or arrays, the reference to those nested structures is copied, 
+// not the actual data.
+// In other words, changes to nested objects or arrays in the copy will affect the original, 
+// because both the original and the copy refer to the same nested structures.
+
 // Shallow Copy Example (Object)
 const original = {
   name: 'John',

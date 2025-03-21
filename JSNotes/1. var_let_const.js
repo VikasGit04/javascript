@@ -1,7 +1,8 @@
 // Var Let and Const
 
 // 1. var
-// Scope: Function-scoped. A variable declared with var is accessible within the function it is declared, or globally if declared outside any function.
+// Scope: Function-scoped. A variable declared with var is accessible within the function it is declared, 
+// or globally if declared outside any function.
 // Hoisting: Variables declared with var are hoisted to the top of their scope and initialized as undefined.
 // Re-declaration: Can be re-declared in the same scope without an error.
 // Example:
@@ -21,7 +22,8 @@ console.log(b); // Output: 10
 
 // 2. let
 // Scope: Block-scoped. A variable declared with let is accessible only within the block {} where it is defined.
-// Hoisting: Variables declared with let are hoisted but not initialized, so accessing them before declaration results in a ReferenceError (this period is called the Temporal Dead Zone (TDZ)).
+// Hoisting: Variables declared with let are hoisted but not initialized, so accessing them before declaration 
+// results in a ReferenceError (this period is called the Temporal Dead Zone (TDZ)).
 // Re-declaration: Cannot be re-declared in the same scope.
 // Example:
 
